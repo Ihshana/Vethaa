@@ -1,0 +1,1016 @@
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+</head><body>
+    <section class="top-txt">
+        <div class="container">
+            <div class="head-txt ">
+                <center><img src="data:image/png;base64,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" width="150" height="150"></center>
+            </div>
+            <div class="sing_in_up">
+                <!--<a href="# ">SIGN IN</a>
+                <a href="# ">SIGN UP</a>-->
+            </div>
+        </div>
+    </section>
+    <section>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <input type="checkbox" name="" id="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="#home"><b>Home</b></a></li>
+                <li><a href="#sellers"><b>Products</b></a></li>
+                <!--<li><a href="#pencil arts">Pencil</a></li>-->
+                <li><a href="#contact"><b>About</b></a></li>
+            </ul>
+            <div class="logo">
+                <img src="" alt="">
+                <P style="color: 7A;"></p>
+            </div>
+        </div>
+    </nav>
+    </section>
+    <section id="home">
+        <div class="home_page ">
+            <div class="home_img ">
+               <img src="https://vethaa.in/images/mockup_all_products.png" alt="img">
+            <!--<img src="https://media.licdn.com/dms/image/C561BAQGYoPOWTxQLsA/company-background_10000/0/1603277927687?e=1697349600&v=beta&t=hR04QI-EmiOuKSO5cqPibtN8sDdxtVOecLcD4xMWvNU" alt="img ">-->
+            </div>
+            <div class="home_txt ">
+                
+                <div class="home_social_icons">
+                    <a href="#"><i class='bx bxl-facebook'></i></a>
+                    <a href="#"><i class='bx bxl-twitter'></i></a>
+                    <a href="#"><i class='bx bxl-pinterest'></i></a>
+                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="motto">
+            <img src="Motto.png">
+        </div>
+    </section>
+
+    <!--<section id="collection">
+        <div class="collections container">
+            <div class="content">
+                <img src="image1.jpg" alt="img" />
+                <div class="img-content">
+                    <p>Original Paintings</p>
+                    <button><a href="#sellers">SHOP NOW</a></button>
+                </div>
+            </div>
+            <div class="content2">
+                <img src="https://goodnessinyou.com/cdn/shop/products/049A1275copy_730x.jpg?v=1651732312" alt="img" />
+                <div class="img-content2">
+                    <p>Prints</p>
+                    <button><a href="#sellers">SHOP NOW</a></button>
+                </div>
+            </div>
+            <div class="content3">
+                <img src="https://m.media-amazon.com/images/I/91lcbSzMpiL.jpg" alt="img" />
+                <div class="img-content3">
+                    <p>Pencil Potraits</p>
+                    <button><a href="#sellers">SHOP NOW</a></button>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!--<section id="sellers">
+        <center>
+        <table class="table">
+
+            
+            
+            <tr>
+            
+            
+            
+            <td><img src="https://images.jdmagicbox.com/quickquotes/images_main/cow-milk-381464173-6j9x9.jpg" alt="cow milk" width="500"></td>
+            
+            <td class="cow-milk"><p>COW MILK</p></td>
+            <br>
+            <td>
+              
+                <button class="buy-now"><a href="https://vethaa.in/products.html"><p>More Details</p></a></button>
+            
+        </td>
+            
+            </tr>
+            
+            <tr>
+            
+            <td>Carrot</th>
+            
+            <td><img src="/images/carrot.jpg" alt="carrot" width="200"></th>
+            
+            <td>Vegetable</th>
+            
+            </tr>
+            
+            <tr>
+            
+            <td>Orange</th>
+            
+            <td><img src="/images/orang.jpg" alt="orange" width="200"></th>
+            
+            <td>Fruit</th>
+            
+            </tr>
+            
+            </table>
+            </center>
+    </section>-->
+    <!--<section id="sellers">
+        <div class="seller container">
+            <h2>Our Products</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <img src="cowmilk.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>COW MILK</p>
+                            
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            
+                            <p>INR.500</p>
+                            
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle blue'></i>
+                                <i class='bx bxs-circle white'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                        <div class="add-cart">
+                            <button>Add To Cart</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.48.08 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>NATURAL MILK</p>
+                            <p>Size: 8"x10" Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.300
+                            <div class="colors">
+                                <i class='bx bxs-circle green'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://forms.gle/qqZBzKLkx8eaeMPU7">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Paintings_page-0002.jpg" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>BIRD</p>
+                            <p>Size: 9"x9" Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.300
+                            <div class="colors">
+                                <i class='bx bxs-circle brown'></i>
+                                <i class='bx bxs-circle green'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://forms.gle/5of5sFV6nD8ZZ7uA6">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Paintings_page-0004.jpg" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>AFRICAN WOMEN SILHOUETTE</p>
+                            <p>Size: 10"x12" Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.400
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://forms.gle/BcqRnEBVRc9JXyup8">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seller container">
+            <h2></h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <img src="LAV.JPEG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>RUSTIC FLOWERS</p>
+                            <p>Size: 12"x16" Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.800
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle blue'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://forms.gle/UGyLdJt2y53cKFLcA">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="BEACH.JPG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>BEACH BOAT</p>
+                            <p>Size: 16"x20" Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.800
+                            <div class="colors">
+                                <i class='bx bxs-circle brown'></i>
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle green'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://forms.gle/AmkjZn5bdP3qziNv6">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="TREE.JPG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>CHERRY BLOSSOM RIVER REFLECTION</p>
+                            <p>Size: 8"x10" Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.300
+                            <div class="colors">
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle blank'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://forms.gle/iJHWfVRSC48rkLrd8">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="TOWER.JPG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>SPRINGTIME CHERRY BLOSSOM TREES AND EIFFEL TOWER</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.1000
+                            <div class="colors">
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://forms.gle/Q4oVHBehctRDcnUJ9">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seller container">
+            <h2>PENCIL ARTS</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <img src="P1.JPG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>A GIRL</p>
+                            <p>Size: A4" Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.200
+                            <div class="colors">
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle black'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://codepen.io/sanketbodke/full/mdprZOq">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="P2.JPG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>MODERN ART</p>
+                            <p>Size: A4 Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.200
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle blue'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://codepen.io/sanketbodke/full/mdprZOq">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="P3.jpeg" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>TAJ MAHAL</p>
+                            <p>Size: A4 Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            
+                            INR.500
+
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://codepen.io/sanketbodke/full/mdprZOq">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="P4.JPG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>POTRAIT DRAWING</p>
+                            <p>Size: A4 Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.800
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://codepen.io/sanketbodke/full/mdprZOq">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <section id="sellers" class="grid-container">
+        <div class="seller container">
+            <h2 style="color: #608E43;">Our Products</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <img src="cowmilk.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>COW MILK</p>
+                            <!--<p>Size: 12"x12" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <!--<div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            
+                            <p>INR.500</p>
+                            
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle blue'></i>
+                                <i class='bx bxs-circle white'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                        <!-- <div class="add-cart">
+                            <button>Add To Cart</button>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.48.08 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>NATURAL MILK (STANDARD) </p>
+                            <!--<p>Size: 8"x10" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                       <!--<div class="price">
+                            
+                            <div class="colors">
+                                <i class='bx bxs-circle green'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 3.00.33 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>ACTIV MILK (TONED) </p>
+                            <!--<p>Size: 8"x10" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                       <!--<div class="price">
+                            
+                            <div class="colors">
+                                <i class='bx bxs-circle green'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 2.58.42 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>RICH MILK (FULL CREAM) </p>
+                            <!--<p>Size: 8"x10" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                       <!--<div class="price">
+                            
+                            <div class="colors">
+                                <i class='bx bxs-circle green'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 3.00.58 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>LITE MILK (DOUBLE TONED) </p>
+                            <!--<p>Size: 8"x10" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                       <!--<div class="price">
+                            
+                            <div class="colors">
+                                <i class='bx bxs-circle green'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.48.32 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>CURD</p>
+                            <!--<p>Size: 9"x9" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <!--<div class="price">
+                            INR.300
+                            <div class="colors">
+                                <i class='bx bxs-circle brown'></i>
+                                <i class='bx bxs-circle green'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.48.46 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>BUTTER MILK</p>
+                            <!--<p>Size: 10"x12" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <!--<div class="price">
+                            INR.400
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.49.10 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>BUTTER</p>
+                            <!--<p>Size: 10"x12" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <!--<div class="price">
+                            INR.400
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.49.39 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>SALTED BUTTER</p>
+                            <!--<p>Size: 10"x12" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <!--<div class="price">
+                            INR.400
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.49.57 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>FRESH GHEE</p>
+                            <!--<p>Size: 10"x12" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <!--<div class="price">
+                            INR.400
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.50.27 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>PANEER</p>
+                            <!--<p>Size: 10"x12" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <!--<div class="price">
+                            INR.400
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.50.42 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>FRESH CREAM</p>
+                            <!--<p>Size: 10"x12" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <!--<div class="price">
+                            INR.400
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="Screenshot 2023-10-08 at 1.51.08 PM.png" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>MILK KHOVA</p>
+                            <!--<p>Size: 10"x12" Canvas sheet with golden glass frame</p>-->
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <!--<div class="price">
+                            INR.400
+                            <div class="colors">
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>-->
+                        <div class="buy-now">
+                            <button><a href="https://vethaa.in/products.html">More Details</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+            
+            
+                    </div>
+                </div>
+            </div>
+        
+        <!--<div class="seller container">
+            <h2>PENCIL ARTS</h2>
+            <div class="best-seller">
+                <div class="best-p1">
+                    <img src="P1.JPG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>A GIRL</p>
+                            <p>Size: A4" Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.200
+                            <div class="colors">
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle black'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://codepen.io/sanketbodke/full/mdprZOq">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="P2.JPG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>MODERN ART</p>
+                            <p>Size: A4 Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.200
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle blue'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://codepen.io/sanketbodke/full/mdprZOq">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="P3.jpeg" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>TAJ MAHAL</p>
+                            <p>Size: A4 Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bxs-star'></i>
+                        </div>
+                        <div class="price">
+                            
+                            INR.500
+
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle red'></i>
+                                <i class='bx bxs-circle blue'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://codepen.io/sanketbodke/full/mdprZOq">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="best-p1">
+                    <img src="P4.JPG" alt="img">
+                    <div class="best-p1-txt">
+                        <div class="name-of-p">
+                            <p>POTRAIT DRAWING</p>
+                            <p>Size: A4 Canvas sheet with golden glass frame</p>
+                        </div>
+                        <div class="rating">
+                            <i class='bx bxs-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                            <i class='bx bx-star'></i>
+                        </div>
+                        <div class="price">
+                            INR.800
+                            <div class="colors">
+                                <i class='bx bxs-circle blank'></i>
+                                <i class='bx bxs-circle grey'></i>
+                                <i class='bx bxs-circle brown'></i>
+                            </div>
+                        </div>
+                        <div class="buy-now">
+                            <button><a href="https://codepen.io/sanketbodke/full/mdprZOq">Buy  Now</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+    </section>
+
+    <section id="contact">
+        <div class="contact container">
+        <div class="map">
+            <center><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9rVj_ALGyR1UozuzKPbQCAXcXqquXiR6Ex4IyjX2QbHY__kEr2nidjvPwhvxnJCEuDpI&usqp=CAU"
+                width="device-width" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></img></center>
+                <div>
+                    
+                <center>
+                    _
+
+                   <p>About</p>
+                   <p>Vethaa is proudly associated with dairy production. <BR>With years of experience, the company is now manufacturing and marketing milk and milk products <BR>including butter, paneer, ghee and fresh cream under Vethaa brand.</p>
+
+                    <p>-</p>
+                    <p></p>
+                    <p></p>
+                </center>
+                </div>
+        </div>
+        
+    </section>
+    <footer class="footer">
+        <div class="footer-container container">
+            
+            
+            <div class="content_4">
+                <center>
+                    
+                        <img src="data:image/png;base64,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" width="150" height="150">
+                        <p style="font-size: larger;">	
+                            <b>1, Raja Complex, Varigandan Street, Ammapettai-614401, Thanjavur</b>
+                            <b>+919095006022</b>
+                        </p>
+                    
+                </center>
+                <P style="color: whitesmoke; font-size: larger;"><i>COPYRIGHT © 2023 VETHAA </i></P>
+                <p></p>
+                <!--<div class="f-mail">
+                    <input type="email" placeholder="Your Email">
+                    <i class='bx bx-envelope'></i>
+                </div>-->
+                <hr>
+            </div>
+        </div>
+        <div class="f-design">
+            <div class="f-design-txt container">
+                <p></p>
+            </div>
+        </div>
+    </footer>
+    
+</body>
